@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fun.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <title>Drawing app</title>
+</head>
+<body>
+    <div class="grid-container full">
+        <div class="grid-x">
+            <div class="sidebar cell large-2">
+                <div id="toolbar">
+                    <div class="grid-y" style="width: 80%;">
+                        <div class="draw-options">
+                            <div class="draw-title font-lg">Draw</div>
+                            <label class="font-sm" for="stroke">Stroke</label>
+                            <input id="stroke" name="stroke" type="color">
+                            <label class="font-sm" for="lineWidth">Line Width</label>
+                            <input id="lineWidth" name="lineWidth" type="number" value="5">
+                            <button id="clear">Clear</button>
+                        </div>
+                        <ul class="menu align-center" style="margin-top: 4rem;">
+                            <li><a href="index.html">Go back</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="place cell large-10">
+                <div class="grid-x align-center">
+                    <canvas id="drawing-board"></canvas>
+                </div>
+            </div>
+        </div>
+        <script src="js/fun/fun.js"></script>
+    </div>
+</body>
+</html>

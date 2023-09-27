@@ -1,0 +1,82 @@
+html{
+    font-size: 100%;
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: white;
+}
+
+.draw-title{
+    color: #882565;
+    font-size: 2rem;
+    -webkit-text-stroke: 0.1rem;
+    -webkit-text-stroke-color: black;
+}
+
+.sidebar{
+    background-color: #532075;
+    background-image: url('../images/sidebar/purple-city.png');
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+}
+
+#toolbar button{
+    background-color: #1565c0;
+    border: none;
+    border-radius: 3rem!important;
+    padding: 0.5rem 0.8rem;
+    color: #fff;
+    background: #3b3642;
+}
+
+.draw-options label, .draw-options input,
+.draw-options button, .draw-options .draw-title{
+    margin-left: 1rem;
+}
+
+.draw-options input{    
+    width: 30%;
+}
+
+label{
+    color: white!important;
+    -webkit-text-stroke: 0.06rem;
+    -webkit-text-stroke-color: black;
+}
+
+.place{
+    background-color: #052C46;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    z-index: 10;
+    background-image: url('../images/parallax/back.png');
+}
+
+li, li a{
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 3rem;
+  background: #3b3642;
+  color: #fff;
+}
+
+li a:hover{
+    background: #fff;
+    color: #2b1055;
+}
+
+#drawing-board{
+    background-color: #e2e2e2;
+    width: 50rem;
+    margin-top: 5rem;
+    height: 30rem;
+}
+
+.full{
+    max-width: 100%;
+}
