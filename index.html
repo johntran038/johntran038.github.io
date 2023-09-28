@@ -1,113 +1,150 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>John Tran's Site</title>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/foundation.css">
-    </head>
-    <body>
-            <header>
-                <div class="logo">
-                    Hi,<br>my name is John Tran
-                    <div class="show-for-small-only">[small]</div>
-                    <div class="show-for-medium-only">[medium]</div>
-                    <div class="show-for-large">[large]</div>
-                </div>
-            </header>
-            <div style="background: #052C46; position: absolute; width:100%; height:100%;"></div>
-            <div class="navigation cell small-6" data-sticky-container>
-                <div class="sticky grid-margin-x" data-sticky>
-                    <ul class="menu align-right">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#ABOUT ME">About</a></li>
-                        <li><a href="#PROJECTS">Projects</a></li>
-                        <li><a href="">Resume</a></li>
-                        <li><a href="fun.html">Fun</a></li>
-                    </ul>
-                </div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John Tran's Site</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/foundation.css">
+</head>
+<body>
+    <div class="off-canvas position-right canvas-on" id="offCanvas" data-off-canvas data-transition="overlap">
+  
+      <button class="close-button" aria-label="Close menu" type="button" data-close>
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <ul class="vertical menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#ABOUT ME">About</a></li>
+        <li><a href="#PROJECTS">Projects</a></li>
+        <li><a href="">Resume</a></li>
+      </ul>
+  
+    </div>
+  
+    <div class="off-canvas-content" data-off-canvas-content>
+      <header>
+        <div class="logo">
+            <div class="hide-for-large" style="padding-top: 3rem;"></div>
+            <!-- <div style="margin-top: 10rem;"></div> -->
+            <center class="show-for-small-only">Hi, <br class="show show-for-large">my name is John Tran</center>
+            <div class="show-for-medium">
+              Hi, <br>my name is John Tran
             </div>
         </div>
-        
-        <section>   
-            <img src="images/parallax/back.png" id="back" alt="background of cyberpunk city">
-            <img src="images/parallax/mid.png" id="middle" alt="midground of cyberpunk city">
-            <h2 id="welcome-text" class="font-lg">Welcome</h2>
-            <img src="images/parallax/fore.png" id="front" alt="foreground of cyberpunk city">
-        </section>
-        <div class="sec">
-            <div id="ABOUT ME" class="grid-container" style="padding-top: 10rem">
-                <div class="grid-x grid-margin-x">
-                    <div class="cell large-4">
+      </header>
+      <div style="background: #052C46; position: absolute; width:100%; height:100%;"></div>
+      <div class="navigation cell" data-sticky-container>
+        <div class="sticky grid-margin-x show-for-small-only" data-sticky>
+          <div class="grid-x align-right">
+            <button type="button" class="canvas-button" data-toggle="offCanvas">&equiv;</button>
+          </div>
+        </div>
+            <div class="sticky grid-margin-x hide-for-small-only" data-sticky>
+                <ul class="menu align-right">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#ABOUT ME">About</a></li>
+                    <li><a href="#PROJECTS">Projects</a></li>
+                    <li><a href="">Resume</a></li>
+                    <li><a class="show-for-small-only">[small]</a></li>
+                    <li><a class="show-for-medium-only">[medium]</a></li>
+                    <li><a class="show-for-large">[large]</a></li>
+                </ul>
+            </div>
+        </div>
+      <section>
+          <img src="images/parallax/back.png" id="back" alt="background of cyberpunk city">
+          <img src="images/parallax/mid.png" id="middle" alt="midground of cyberpunk city">
+          <div class="show-for-large"><h2 id="welcome-text" class="font-lg">Welcome</h2></div>
+          <img src="images/parallax/fore.png" id="front" alt="foreground of cyberpunk city">
+      </section>
+      <div class="sec">
+            <div style="padding-top: 10rem" class="show-for-medium"></div>
+            <div id="ABOUT ME" class="grid-container">
+                <div class="grid-x grid-margin-x align-center">
+                    <div class="cell large-4 medium-6">
                         <img src="images/me.jpg" alt="Picture of John Tran">
                     </div>
-                    <div class="cell large-7">
-                            <h2 style="margin-top: 3rem;">About Me</h2>
-                            <p class="font-sm">
-                                I am a student at the University of St. Thomas and pursuing a Bachelor of Computer Science Degree. I am the Treasurer of the Computer Science Club. My hobbies include playing chess, drawing, and traveling.
-                            </p>
+                    <div class="cell large-7 show-for-large">
+                        <h2 style="margin-top: 3rem;">About Me</h2>
+                        <p class="font-sm">
+                            I am a student at the University of St. Thomas and pursuing a Bachelor of Computer Science Degree. I am the Treasurer of the Computer Science Club. My hobbies include playing chess, drawing, and traveling.
+                        </p>
+                    </div>
+                    <div class="cell medium-12 show-for-medium-only">
+                        <center><h2 style="margin-top: 3rem;">About Me</h2></center>
+                        <p class="font-sm">
+                            I am a student at the University of St. Thomas and pursuing a Bachelor of Computer Science Degree. I am the Treasurer of the Computer Science Club. My hobbies include playing chess, drawing, and traveling.
+                        </p>
+                    </div>
+                    <div class="cell small-12 show-for-small-only">
+                        <center><h1 style="margin-top: 1rem;" class="font-sm">About Me</h1></center>
+                        <p class="font-xss cell small-12">
+                            I am a student at the University of St. Thomas and pursuing a Bachelor of Computer Science Degree. I am the Treasurer of the Computer Science Club. My hobbies include playing chess, drawing, and traveling.
+                        </p>
                     </div>
                 </div>
             </div>
-            <div class="grid-container" style="padding-top: 14rem">
-                <h1 id="PROJECTS" class="font-lg">Projects</h1>
+            <div style="padding-top: 14rem" class="show-for-medium"></div>
+            <div style="padding-top: 8rem" class="show-for-small-only"></div>
+            <div id="PROJECTS" class="grid-container">
+                <h1 class="font-lg show-for-medium">Projects</h1>
+                <h1 class="font-md show-for-small-only">Projects</h1>
+                <div style="padding-top: 1rem" class="show-for-small-only"></div>
                 <div class="grid-x grid-margin-x" >
                     <div class="cell large-4">
                         <img src="images/project-covers/rsp.png" alt="Cover for the Rhythm Swipe Project">
                     </div>
                     <div class="cell large-7">
-                        <h1 class="font-md" style="margin-top: 1rem;">Rhythm Swipe</h1>
-                        <p class="font-sm">A rhythm game is controlled by a light sensor and turning a knob. It is coded in Java using Processing and Arduinos.<br><a href="https://youtu.be/rgs-iTpvMRE" target="_blank">Watch a demo here!</a></p>
-                        
+                        <h1 class="font-md show-for-medium" style="margin-top: 1rem;">Rhythm Swipe</h1>
+                        <p class="font-sm show-for-medium">A rhythm game is controlled by a light sensor and turning a knob. It is coded in Java using Processing and Arduinos.<br><a href="https://youtu.be/rgs-iTpvMRE" target="_blank">Watch a demo here!</a></p>
+                        <h1 class="font-xs show-for-small-only" style="margin-top: 1rem;">Rhythm Swipe</h1>
+                        <p class="font-xss show-for-small-only">A rhythm game is controlled by a light sensor and turning a knob. It is coded in Java using Processing and Arduinos.<br><a class="font-xs" href="https://youtu.be/rgs-iTpvMRE" target="_blank">Watch a demo here!</a></p>
                     </div>
                 </div>
-                <div class="grid-x grid-margin-x" style="padding-top:5rem">
+                <div style="padding-top:5rem" class="show-for-medium"></div>
+                <div style="padding-top:3rem" class="show-for-small-only"></div>
+                <div class="grid-x grid-margin-x">
                     <div class="cell large-4">
                         <img src="images/project-covers/fragment-shaders.png" alt="Cover for the Fragement Shader Project">
                     </div>
-                    <div class="cell large-7">
-                        <h1 class="font-md" style="margin-top: 1rem;">WebGL Fragment Shader Fun!</h1>
-                        <p class="font-sm">A Computer Graphics project that uses fragment shaders to create effects to whatever is being displayed.<br><a href="https://tran6854.github.io/cg-fragmentshaders/" target="_blank">Try it now!</a></p>
-                        
+                    <div class="cell large-7 small-12">
+                        <h1 class="font-md show-for-medium" style="margin-top: 1rem;">WebGL Fragment Shader Fun!</h1>
+                        <p class="font-sm show-for-medium">A Computer Graphics project that uses fragment shaders to create effects to whatever is being displayed.<br><a href="https://tran6854.github.io/cg-fragmentshaders/" target="_blank">Try it now!</a></p>
+                        <h1 class="font-xs show-for-small-only" style="margin-top: 1rem;">WebGL Fragment Shader Fun!</h1>
+                        <p class="font-xss show-for-small-only">A Computer Graphics project that uses fragment shaders to create effects to whatever is being displayed.<br><a class="font-xs" href="https://tran6854.github.io/cg-fragmentshaders/" target="_blank">Try it now!</a></p>
                     </div>
                 </div>
                 
-                <div class="grid-x grid-margin-x" style="padding-top:5rem">
+                <div style="padding-top:5rem" class="show-for-medium"></div>
+                <div style="padding-top:3rem" class="show-for-small-only"></div>
+                <div class="grid-x grid-margin-x">
                     <div class="cell large-4">
                         <img src="images/project-covers/p5.png" alt="Cover for the p5js collections">
                     </div>
                     <div class="cell large-7">
-                        <h1 class="font-md" style="margin-top: 1rem;">P5js Collection</h1>
-                        <p class="font-sm">A collection of noteworthy Creative Coding projects. They are coded in JavaScript using the p5js library.<br><a href="https://editor.p5js.org/johntran038/collections/O9c_vFv6L" target="_blank">Check them out!</a></p>
-                        
+                        <h1 class="font-md show-for-medium" style="margin-top: 1rem;">P5js Collection</h1>
+                        <p class="font-sm show-for-medium">A collection of noteworthy Creative Coding projects. They are coded in JavaScript using the p5js library.<br><a href="https://editor.p5js.org/johntran038/collections/O9c_vFv6L" target="_blank">Check them out!</a></p>
+                        <h1 class="font-xs show-for-small-only" style="margin-top: 1rem;">P5js Collection</h1>
+                        <p class="font-xss show-for-small-only">A collection of noteworthy Creative Coding projects. They are coded in JavaScript using the p5js library.<br><a class="font-xs" href="https://editor.p5js.org/johntran038/collections/O9c_vFv6L" target="_blank">Check them out!</a></p>
                     </div>
                 </div>
             </div>
 
         </div>
+    </div>
 
-        <script>
-            let back = document.getElementById('back');
-            let middle = document.getElementById('middle');
-            let front = document.getElementById('front');
-            let welcomText = document.getElementById('welcome-text');
-
-            window.addEventListener('scroll', function(){
-                let value = window.scrollY;
-                back.style.top = value * 0.8      + 'px';
-                middle.style.top = value * 0.5  + 'px';
-                front.style.top = value * 0  + 'px';
-                welcomText.style.marginRight = value * 3  + 'px';
-            })
-        </script>
-
-        <!-- include before closing <body> tag -->
-        <script src="js/vendor/jquery.js"></script>
-        <script src="js/vendor/what-input.js"></script>
-        <script src="js/vendor/foundation.js"></script>
-        <script type="application/javascript">
-            $(document).foundation();
-        </script>
-    </body>
+    <script src="js/my/scripts.js" type="module"></script>
+    
+    <!-- include before closing <body> tag -->
+      <script src="js/vendor/jquery.js"></script>
+      <script src="js/vendor/what-input.js"></script>
+      <script src="js/vendor/foundation.js"></script>
+      <script type="application/javascript">
+          $(document).foundation();
+          $('.off-canvas a').on('click', function() {
+              $('.off-canvas').foundation('close');
+          });
+      </script>
+</body>
 </html>
