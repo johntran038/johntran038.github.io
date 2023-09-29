@@ -163,3 +163,8 @@ section #front{
     padding-left: 3rem;
     padding-right: 3rem;
 }
+
+.resume-link{
+    text-decoration: underline;
+    color: white;
+}
