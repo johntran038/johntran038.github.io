@@ -130,7 +130,6 @@ section #front{
 }
 .sec{
     position: relative;
-    /* padding: 100px; */
     background: #1c0522;
     color: #fff!important;
 }
@@ -150,4 +149,17 @@ section #front{
     background: #3b3642;
     /* border-radius: 1rem!important; */
     font-size: 5rem;
+}
+
+.line{
+    width: 100%;
+}
+
+.ulist li{
+    list-style: none;
+}
+
+.resume-body{
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
