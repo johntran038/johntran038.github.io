@@ -50,6 +50,21 @@ header{
     font-size: 3.5rem;
 }
 
+.padding-xs{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.padding-sm{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.padding-md{
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
 .navigation{
     z-index: 30;
     font-size: 1.2rem;
@@ -115,7 +130,7 @@ section #front{
 }
 .sec{
     position: relative;
-    padding: 100px;
+    /* padding: 100px; */
     background: #1c0522;
     color: #fff!important;
 }
