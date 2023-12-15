@@ -15,8 +15,6 @@ body{
 }
 header{
     position: absolute;
-    /* width: 50%; */
-    padding: 30px 100px;
     display: flex;
     pointer-events:none;
     z-index: 20;
@@ -27,7 +25,8 @@ header{
     text-decoration: none;
     font-size: 2em;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 0.1rem;
+    padding: 1rem 1rem;
 }
 
 .font-xss{
@@ -39,7 +38,7 @@ header{
 }
 
 .font-sm{
-    font-size: 1.8rem;
+    font-size: 1.8em;
 }
 
 .font-md{
@@ -63,6 +62,15 @@ header{
 .padding-md{
     padding-left: 3rem;
     padding-right: 3rem;
+}
+
+.view-more{
+    text-decoration: underline;
+    background: none!important;
+    border: none;
+    color: white;
+    padding: 0!important;
+    cursor: pointer;
 }
 
 .navigation{
@@ -167,4 +175,70 @@ section #front{
 .resume-link{
     text-decoration: underline;
     color: white;
+}
+
+.cs-icon{
+    background-color: #532075;
+    padding: 0!important;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.cs-icon span{
+    text-align: center;
+    line-height: 3.8;
+}
+
+.cs-icon img{
+    height: 4rem!important;
+    width: 4rem!important;
+    margin-right: 1rem;
+}
+
+.project{
+    background-color: #301f5c;
+    border-radius: 2rem;
+    padding:0;
+    margin: 0;
+}
+
+.project-img{
+    /* border-radius: 2rem 0 0 2rem; */
+    padding: 0;
+    margin: 0!important;
+}
+
+.link{
+    background-color: #513f7d;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+}
+
+.link img{
+    width: 2.6rem;
+}
+
+@media only screen and (min-width: 1025px) {
+    .project-img {
+        border-radius: 2rem 0 0 2rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .project-img {
+    border-radius: 2rem 2rem 0 0;
+    }
+    .project{
+        margin-left: 3rem!important;
+        margin-right: 3rem!important;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .project {
+        margin-left: 2rem!important;
+        margin-right: 2rem!important;
+    }
 }
