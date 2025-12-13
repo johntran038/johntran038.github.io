@@ -4,7 +4,6 @@ const Project = () => {
 
     return (
         <div>
-            Portfolio in under construction :/
         </div>
     );
 };

@@ -2,11 +2,11 @@ import React, { useState } from "react";
 
 const Home = () => {
     
-    
+
 
     return (
         <div>
-            test 
+            Portfolio in under construction :/
         </div>
     );
 };
