@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 
-const Home = () => {
-    
-    
+const Project = () => {
 
     return (
         <div>
-            test 
+            Portfolio in under construction :/
         </div>
     );
 };
 
-export default Home;
+export default Project;
