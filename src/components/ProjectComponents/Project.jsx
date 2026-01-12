@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { BiSolidMoviePlay } from "react-icons/bi";
 import VideoIcon from "../IconComponents/VideoIcon";
 import ProjectIcon from "../IconComponents/ProjectIcon";
 import SourceCodeIcon from "../IconComponents/SourceCodeIcon";
@@ -14,17 +13,21 @@ const Project = ({ image, alt, title, desc, children, links }) => {
                 <img className="w-full h-full object-cover" src={`/images/projects/${image}.png`} alt={alt || ''} />
                 <div className="absolute bg-[#2276EB]/40 w-full h-full hidden group-hover:block ">
                     <div className="
-                        absolute inset-0 flex items-center justify-center opacity-100
+                        absolute inset-0 flex items-center justify-center
                         mt-50 text-white
                     ">
-                        <div className="text-[2em] bg-red flex space-x-1">
-                        {/* <BiSolidMoviePlay /> */}
+                        {/* <div className="text-[2em] bg-red flex space-x-1">
+                        <VideoIcon/>
+                        <SourceCodeIcon/>
+                        <ProjectIcon/>
+                        </div> */}
+                    </div>
+                </div>
+                        <div className="absolute inset-0 flex items-center justify-center mt-50 text-white text-[2em] bg-red flex space-x-1">
                         <VideoIcon/>
                         <SourceCodeIcon/>
                         <ProjectIcon/>
                         </div>
-                    </div>
-                </div>
             </div>
             <div className="p-2">
                 <h2 className="font-semibold text-lg">{title}</h2>
