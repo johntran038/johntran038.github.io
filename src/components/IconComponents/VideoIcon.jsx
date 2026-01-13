@@ -4,7 +4,7 @@ import { BiLoaderCircle } from "react-icons/bi";
 import IconFrame from "./IconFrame";
 
 
-const VideoIcon = (className) => {
+const VideoIcon = () => {
 
     return (
         <IconFrame tooltip="View Demo">

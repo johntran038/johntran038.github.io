@@ -4,7 +4,7 @@ import { FiChevronRight } from "react-icons/fi";
 import { HiMiniSlash } from "react-icons/hi2";
 import IconFrame from "./IconFrame";
 
-const SourceCodeIcon = (className) => {
+const SourceCodeIcon = () => {
 
     const bg = "bg-gray-600";
 

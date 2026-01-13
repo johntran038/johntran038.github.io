@@ -4,7 +4,7 @@ import { FaRegFolderOpen } from "react-icons/fa6";
 import IconFrame from "./IconFrame";
 
 
-const ProjectIcon = (className) => {
+const ProjectIcon = () => {
 
     return (
         <IconFrame tooltip="View Project">

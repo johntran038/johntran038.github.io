@@ -23,20 +23,20 @@ const Project = ({ image, alt, title, desc, children, links }) => {
                         </div> */}
                     </div>
                 </div>
-                        <div className="absolute inset-0 flex items-center justify-center mt-50 text-white text-[2em] bg-red flex space-x-1">
-                        <VideoIcon/>
-                        <SourceCodeIcon/>
-                        <ProjectIcon/>
-                        </div>
+                <div className="absolute inset-0 flex items-center justify-center mt-50 text-white text-[2em] bg-red flex space-x-1">
+                    <VideoIcon />
+                    <SourceCodeIcon />
+                    <ProjectIcon />
+                </div>
             </div>
             <div className="p-2">
                 <h2 className="font-semibold text-lg">{title}</h2>
                 {
-                    children ?  //if
-                        children : //then children
-                    desc ?      //else if
-                        desc :      //then desc
-                    <p>N/A</p>  // else N/A
+                    children ?  //if children
+                        children : // ^^ then display that
+                        desc ?      //else if desc
+                            desc :      // ^^ then display this instead
+                            <p>N/A</p>  // else N/A
                 }
             </div>
         </div>

@@ -7,14 +7,14 @@ import { FiChevronLeft } from "react-icons/fi";
 import { FiChevronRight } from "react-icons/fi";
 import { HiMiniSlash } from "react-icons/hi2";
 
-const IconFrame = ({className, tooltip, children}) => {
+const IconFrame = ({tooltip, children}) => {
 
     const bg = "bg-gray-600";
 
     return (
         <Tooltip content={tooltip} className="bg-black p-1 rounded-md shadow-lg text-sm">
             <div className="flex items-center justify-center">
-                <div className={`${bg} w-[3em] h-[2.55em] ${className} flex items-center justify-center rounded-sm text-[0.6em] group/icon relative`}>
+                <div className={`${bg} w-[3em] h-[2.55em] flex items-center justify-center rounded-sm text-[0.6em] group/icon relative`}>
                     {children}
                 </div>
             </div>
