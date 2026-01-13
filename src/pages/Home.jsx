@@ -12,11 +12,11 @@ const Home = () => {
     // tune("bg:xml:green-200/blue-100/red-200");
     return (
         <div className="flex min-h-screen bg-gray-200">
-            <div className="w-200 bg-gray-600 text-white p-6"><h2 className="text-xl font-bold mb-4">Menu</h2>
-                <nav className="flex flex-col gap-3">
+            <div className="w-200 bg-gray-600 text-white p-6">
+                <nav className="flex flex-col gap-3 text-2xl">
                     <a href="#" className="hover:text-gray-300">Home</a>
                     <a href="#" className="hover:text-gray-300">Projects</a>
-                    <a href="#" className="hover:text-gray-300">About</a>
+                    <a href="#" className="hover:text-gray-300">About Me</a>
                     <a href="#" className="hover:text-gray-300">Contact</a>
                 </nav>
             </div>
