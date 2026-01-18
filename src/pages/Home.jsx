@@ -10,20 +10,27 @@ const Home = () => {
     // tune("bg:green-200/x/x/red-200");
     // tune("bg:green-200/blue-100/x/red-200");
     // tune("bg:xml:green-200/blue-100/red-200");
+
+    const screenGlowEffect=`
+        bg-[#141324]
+        shadow-[inset_0_0_30px_rgba(67,67,117,0.9)]
+    `
+
     return (
-        <div className="flex min-h-screen bg-gray-200">
-            <div className="w-200 bg-gray-600 text-white p-6">
-                <h2 className="font-semibold text-2xl mb-3">John Tran</h2>
+        <div className={`flex min-h-screen bg-gray-200 `}>
+            <div className="w-200 bg-gray-900 text-white p-6">
+                <h2 className="font-semibold text-2xl">John Tran</h2>
+                    <h3 className="text-md text-gray-400 mb-3">Software Developer</h3>
                 <nav className="flex flex-col gap-2 text-lg">
                     <a href="#" className="hover:text-gray-300">Projects</a>
                     <a href="#" className="hover:text-gray-300">About Me</a>
                     <a href="#" className="hover:text-gray-300">Contact</a>
                 </nav>
             </div>
-            <div>
-                <div className="flex flex-col items-center justify-center py-5">
+            <div className={`${screenGlowEffect}`}>
+                <div className="flex flex-col items-center justify-center py-5 text-white">
                     <h2 className="text-5xl mb-2">John Tran</h2>
-                    <h3 className="text-lg">Software Developer</h3>
+                    <h3 className="text-lg">Web & Game Developer</h3>
                 </div>  
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-wrap p-3">
                     {/* <div className={`grid gap-6 text-wrap p-3 ${tune("grid-cols:dsl:1/2/3")}`}> */}
