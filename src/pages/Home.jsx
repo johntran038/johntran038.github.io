@@ -19,7 +19,7 @@ const Home = () => {
     return (
         <div className={`flex min-h-screen bg-gray-200 `}>
             <div className="w-70 bg-gray-900 text-white p-6">
-                <h2 className="font-semibold text-2xl">John Tran</h2>
+                <h2 className="font-semibold text-2xl">John Tran's page</h2>
                     <h3 className="text-md text-gray-400 mb-3">Software Developer</h3>
                 <nav className="flex flex-col gap-2 text-lg">
                     <a href="#" className="hover:text-gray-300">Projects</a>
