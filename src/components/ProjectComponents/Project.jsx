@@ -10,6 +10,8 @@ const Project = ({ image, alt, title, desc, children }) => {
     const [maskStyle, setMaskStyle] = useState({});
     const cancelRef = useRef(false);
 
+    // const projectCover =  
+
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
@@ -91,7 +93,14 @@ const Project = ({ image, alt, title, desc, children }) => {
         <div className="bg-white">
             <div className="h-80 flex relative group"  onMouseEnter={() => startAnimation("0% 0%")} onMouseLeave={()=>{startAnimation("10% 10%");}}>
                     <div className="w-full h-full absolute" style={maskStyle}>
-                        <img className="w-full h-full" src={`/images/projects/project-general-cover.png`} alt={alt} />
+                        <div className="project-cover-background flex items-center justify-center">
+                            <img className="project-cover-image" src={`images/projects/${image}-cover.png`} alt={alt}
+                            onError={(e) => {
+                                e.target.src = "/images/projects/project-general-cover.png"
+                                e.target.alt = "Project Cover"
+                            }}
+                            />
+                        </div>
                     </div>
 
                     <img className="w-full h-full object-cover" src={`/images/projects/${image}.png`} alt={alt} />

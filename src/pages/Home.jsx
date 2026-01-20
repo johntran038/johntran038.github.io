@@ -46,7 +46,7 @@ const Home = () => {
                     />
                     <Project
                         title="St. Paul Crime Database Explorer"
-                        image="rsp"
+                        image="crime-data"
                         desc="A project made in Web Development that filters through an api to access crime data. It is a vital resource for community safety and a tool for research."
                     >
                         <p>
