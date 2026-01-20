@@ -17,9 +17,9 @@ const Home = () => {
     `
 
     return (
-        <div className={`flex min-h-screen bg-gray-200 `}>
-            <div className="w-70 bg-gray-900 text-white p-6">
-                <h2 className="font-semibold text-2xl">John Tran's page</h2>
+        <div className={`flex items-start bg-gray-900`}>
+            <div className="w-70 bg-gray-900 text-white p-6" style={{position:"sticky", top:"20px"}}>
+                <h2 className="font-semibold text-2xl">John Tran</h2>
                     <h3 className="text-md text-gray-400 mb-3">Software Developer</h3>
                 <nav className="flex flex-col gap-2 text-lg">
                     <a href="#" className="hover:text-gray-300">Projects</a>
@@ -37,6 +37,8 @@ const Home = () => {
                         title="Airline Safety Informant"
                         image="airline-info"
                         desc="A project made in Web Development that filters through an api to access crime data. It is a vital resource for community safety and a tool for research."
+                        coverDetails={{alt: "air plane by Rafi Al Hakim"}}
+                        // air plane by Rafi Al Hakim from <a href="https://thenounproject.com/browse/icons/term/air-plane/" target="_blank" title="air plane Icons">Noun Project</a> (CC BY 3.0)
                     />
                     <Project
                         title="Purified"
