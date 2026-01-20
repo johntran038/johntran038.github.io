@@ -90,8 +90,8 @@ const Project = ({ image, alt, title, desc, children }) => {
 
 
     return (
-        <div className="bg-white">
-            <div className="h-80 flex relative group"  onMouseEnter={() => startAnimation("0% 0%")} onMouseLeave={()=>{startAnimation("10% 10%");}}>
+        <div className="bg-white w-90">
+            <div className="h-90 flex relative group"  onMouseEnter={() => startAnimation("0% 0%")} onMouseLeave={()=>{startAnimation("10% 10%");}}>
                     <div className="w-full h-full absolute" style={maskStyle}>
                         <div className="project-cover-background flex items-center justify-center">
                             <img className="project-cover-image" src={`images/projects/${image}-cover.png`} alt={alt}
