@@ -5,17 +5,19 @@ import ProjectIcon from "../IconComponents/ProjectIcon";
 import SourceCodeIcon from "../IconComponents/SourceCodeIcon";
 
 
-const Project = ({ image, alt, title, desc, children, coverDetails }) => {
+const Project = ({ image, alt, title, desc, children, links, coverDetails }) => {
     const [maskSizes, setMaskSizes] = useState([]);
     const [maskStyle, setMaskStyle] = useState({});
     const cancelRef = useRef(false);
+
+    const { project, video, sourceCode } = links ?? {};
 
     // const projectCover =  
 
     function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
-    
+
     const createPixels = () => {
         const positions = [];
         const images = [];
@@ -48,7 +50,7 @@ const Project = ({ image, alt, title, desc, children, coverDetails }) => {
 
     const randomlyAnimatePixels = async (setTo) => {
         let tempSizes = [...maskSizes];
-        
+
         // [0,1,2,3,4,5, ...]
         let availableIndexes = tempSizes.map((_, i) => i);
 
@@ -60,7 +62,7 @@ const Project = ({ image, alt, title, desc, children, coverDetails }) => {
 
             tempSizes[index] = setTo;
 
-            
+
             setMaskSizes([...tempSizes]);
             setMaskStyle(prev => ({
                 ...prev,
@@ -86,28 +88,44 @@ const Project = ({ image, alt, title, desc, children, coverDetails }) => {
         await randomlyAnimatePixels(setTo);
     };
 
+    const renderIcon = (Icon, info) => {
+        
+        return (<>
+            {info &&
+                <Link to={info.link} target={info?.target ?? '_blank'}>
+                    <Icon tooltip={info.tooltip}/>
+                </Link>
+            }
+        </>);
+    }
+
 
     return (
         // <div className="text-white w-90"> 
         //     <div className="h-90 flex relative group" onMouseEnter={() => startAnimation("0% 0%")} onMouseLeave={()=>{startAnimation("10% 10%");}}>
-        <div className="text-white w-60 sm:w-60 xl:w-70"> 
-            <div className="h-60 sm:h-60 xl:h-70 flex relative group" onMouseEnter={() => startAnimation("0% 0%")} onMouseLeave={()=>{startAnimation("10% 10%");}}>
-                    <div className="w-full h-full absolute no-select-or-drag" style={maskStyle}>
-                        <div className="project-cover-background flex items-center justify-center">
-                            <img className="project-cover-image" src={`images/projects/${image}-cover.png`}
+        <div className="text-white w-60 sm:w-60 xl:w-70">
+            <div className="h-60 sm:h-60 xl:h-70 flex relative group" onMouseEnter={() => startAnimation("0% 0%")} onMouseLeave={() => { startAnimation("10% 10%"); }}>
+                <div className="w-full h-full absolute no-select-or-drag" style={maskStyle}>
+                    <div className="project-cover-background flex items-center justify-center">
+                        <img className="project-cover-image" src={`images/projects/${image}-cover.png`}
                             alt={coverDetails?.alt || alt}
                             onError={(e) => {
                                 e.target.src = "/images/projects/project-general-cover.png"
                                 e.target.alt = "Project Cover"
                             }}
-                            />
-                        </div>
+                        />
                     </div>
-                    <img className="w-full h-full object-cover no-select-or-drag" src={`/images/projects/${image}.png`} alt={alt} />
+                </div>
+                <img className="w-full h-full object-cover no-select-or-drag" src={`/images/projects/${image}.png`} alt={alt} />
                 <div className="absolute inset-0 flex items-center justify-center mt-50 text-white text-[2em] flex space-x-1">
-                    <VideoIcon />
-                    <SourceCodeIcon />
-                    <ProjectIcon />
+                    {/* {video && <Link to={video.link} target="_blank">
+                        <VideoIcon tooltip={video.tooltip} />
+                    </Link>} */}
+                    {renderIcon(VideoIcon, video)}
+                    {renderIcon(SourceCodeIcon, sourceCode)}
+                    {/* <SourceCodeIcon /> */}
+                    {renderIcon(ProjectIcon, project)}
+                    {/* <ProjectIcon /> */}
                 </div>
             </div>
 

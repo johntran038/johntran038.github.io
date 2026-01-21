@@ -4,12 +4,12 @@ import { FiChevronRight } from "react-icons/fi";
 import { HiMiniSlash } from "react-icons/hi2";
 import IconFrame from "./IconFrame";
 
-const SourceCodeIcon = () => {
+const SourceCodeIcon = ({tooltip}) => {
 
     const bg = "bg-gray-600";
 
     return (
-        <IconFrame tooltip="View Source Code">
+        <IconFrame tooltip={tooltip || "View Source Code"}>
             <div className="absolute inset-0 flex items-center justify-center">
                 <HiMiniSlash className=" text-lg w-10" />
                 <div className={`

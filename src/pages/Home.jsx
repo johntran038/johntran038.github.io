@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useResponsive from "../hooks/useResponsive";
 import Project from "../components/ProjectComponents/Project";
+import { tooltip } from "@material-tailwind/react";
 
 const Home = () => {
 
@@ -20,7 +21,7 @@ const Home = () => {
 
     return (
         <div className={`flex bg-[#141324] text-white min-h-screen`}>
-            <div className={`fixed min-h-screen z-10 ${open ? 'block' : 'hidden'} lg:block lg:static w-70 bg-gray-900 p-6`}>
+            <div className={`fixed min-h-screen z-10 ${open ? 'block' : 'hidden'} lg:block lg:static w-70 bg-gray-700 p-6`}>
                 <h2 className="font-semibold text-2xl">John Tran</h2>
                 <h3 className="text-md text-gray-400 mb-3">Software Developer</h3>
                 <nav className="flex flex-col gap-2 text-lg">
@@ -56,6 +57,7 @@ const Home = () => {
                             title="Airline Safety Informant"
                             image="airline-info"
                             desc="A project made in Web Development that filters through an api to access crime data. It is a vital resource for community safety and a tool for research."
+                            // projectDetails={}
                             coverDetails={{ alt: "air plane by Rafi Al Hakim" }}
                         // air plane by Rafi Al Hakim from <a href="https://thenounproject.com/browse/icons/term/air-plane/" target="_blank" title="air plane Icons">Noun Project</a> (CC BY 3.0)
                         />
@@ -63,6 +65,11 @@ const Home = () => {
                             title="Purified"
                             image="purified"
                             desc="A game that addresses awareness on the lack of clean water and teaches the player methods to solve this issue."
+                            links={{
+                                project: {link:"https://francisishere.itch.io/purified"},
+                                video: {tooltip: "View Trailer", link: "https://www.youtube.com/watch?v=uISKLdbU4N8"},
+                                sourceCode: {link:"https://github.com/FrancisTR/Godot-Purified"},
+                            }}
                         />
                         <Project
                             title="St. Paul Crime Database Explorer"
