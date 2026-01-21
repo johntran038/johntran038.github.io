@@ -88,11 +88,14 @@ const Project = ({ image, alt, title, desc, children, coverDetails }) => {
 
 
     return (
-        <div className="bg-[#141324] bg-white w-90"> 
-            <div className="h-90 flex relative group"  onMouseEnter={() => startAnimation("0% 0%")} onMouseLeave={()=>{startAnimation("10% 10%");}}>
-                    <div className="w-full h-full absolute" style={maskStyle}>
+        // <div className="text-white w-90"> 
+        //     <div className="h-90 flex relative group" onMouseEnter={() => startAnimation("0% 0%")} onMouseLeave={()=>{startAnimation("10% 10%");}}>
+        <div className="text-white w-60 sm:w-60 xl:w-70"> 
+            <div className="h-60 sm:h-60 xl:h-70 flex relative group" onMouseEnter={() => startAnimation("0% 0%")} onMouseLeave={()=>{startAnimation("10% 10%");}}>
+                    <div className="w-full h-full absolute no-select-or-drag" style={maskStyle}>
                         <div className="project-cover-background flex items-center justify-center">
-                            <img className="project-cover-image" src={`images/projects/${image}-cover.png`} alt={coverDetails?.alt || alt}
+                            <img className="project-cover-image" src={`images/projects/${image}-cover.png`}
+                            alt={coverDetails?.alt || alt}
                             onError={(e) => {
                                 e.target.src = "/images/projects/project-general-cover.png"
                                 e.target.alt = "Project Cover"
@@ -100,7 +103,7 @@ const Project = ({ image, alt, title, desc, children, coverDetails }) => {
                             />
                         </div>
                     </div>
-                    <img className="w-full h-full object-cover" src={`/images/projects/${image}.png`} alt={alt} />
+                    <img className="w-full h-full object-cover no-select-or-drag" src={`/images/projects/${image}.png`} alt={alt} />
                 <div className="absolute inset-0 flex items-center justify-center mt-50 text-white text-[2em] flex space-x-1">
                     <VideoIcon />
                     <SourceCodeIcon />
