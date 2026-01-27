@@ -21,12 +21,13 @@ const Home = () => {
 
     return (
         <div className={`flex bg-[#141324] text-white min-h-screen`}>
-            <div className={`fixed min-h-screen z-10 ${open ? 'block' : 'hidden'} lg:block lg:static w-70 bg-gray-700 p-6`}>
+            <div className={`fixed min-h-screen z-10 ${open ? 'block' : 'hidden'} lg:block lg:static w-50 md:w-70 bg-gray-700 p-6`}>
                 <h2 className="font-semibold text-2xl">John Tran</h2>
                 <h3 className="text-md text-gray-400 mb-3">Software Developer</h3>
                 <nav className="flex flex-col gap-2 text-lg">
                     <a href="#" className="hover:text-gray-300">Projects</a>
                     <a href="#" className="hover:text-gray-300">About Me</a>
+                    <a href="#" className="hover:text-gray-300">Work Experience</a>
                     <a href="#" className="hover:text-gray-300">Contact</a>
                 </nav>
             </div>
@@ -52,19 +53,19 @@ const Home = () => {
                         <div className="block lg:hidden" onClick={() => setOpen(true)}>Open Menu</div>
                         <div className="hidden sm:block absolute left-1/2 -translate-x-1/2 lg:static lg:translate-none">Search button / filter button</div>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-wrap p-3 justify-items-center">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-wrap p-3 justify-items-center mb-20">
                         <Project
                             title="Airline Safety Informant"
                             image="airline-info"
-                            desc="A project made in Web Development that filters through an api to access crime data. It is a vital resource for community safety and a tool for research."
-                            // projectDetails={}
+                            // desc="A project made in Web Development that filters through an api to access crime data. It is a vital resource for community safety and a tool for research."
+                            desc="Informational webpage that provides accident history of airlines."
                             coverDetails={{ alt: "air plane by Rafi Al Hakim" }}
                         // air plane by Rafi Al Hakim from <a href="https://thenounproject.com/browse/icons/term/air-plane/" target="_blank" title="air plane Icons">Noun Project</a> (CC BY 3.0)
                         />
                         <Project
                             title="Purified"
                             image="purified"
-                            desc="A game that addresses awareness on the lack of clean water and teaches the player methods to solve this issue."
+                            desc="A game that addresses the lack clean water access."
                             links={{
                                 project: {link:"https://francisishere.itch.io/purified"},
                                 video: {tooltip: "View Trailer", link: "https://www.youtube.com/watch?v=uISKLdbU4N8"},
@@ -74,21 +75,35 @@ const Home = () => {
                         <Project
                             title="St. Paul Crime Database Explorer"
                             image="crime-data"
-                            desc="A project made in Web Development that filters through an api to access crime data. It is a vital resource for community safety and a tool for research."
+                            desc="A Database that uses an API to access crime data in St. Paul."
+                            // desc="A project made in Web Development that filters through an api to access crime data. It is a vital resource for community safety and a tool for research."
                         >
-                            <p>
+                            {/* <p>
                                 A rhythm game is controlled by a light sensor and turning a knob. There are two versions:<br />
                                 One is coded in <a href="https://github.com/johntran038/Rhythm-Swipe_Processing" target="_blank">Java using Processing</a><br />
                                 The other is coded in <a href="https://github.com/FrancisTR/Rhythm-Swipe" target="_blank">JavaScript using p5.js</a>
-                            </p>
+                            </p> */}
                         </Project>
                         <Project
                             title="Rhythm Swipe"
                             image="rsp"
-                            desc="A version of “Rhythm Swipe” that is written in Processing Using Java for the Creative Coding Exhibition at University of St. Thomas. The goal of this project is to inspire a future generation of individuals with a passion for creative expression and programming."
+                            desc="A rhythm game where you swipe gems by cracking open safe."
+                            // desc="A version of “Rhythm Swipe” that is written in Processing Using Java for the Creative Coding Exhibition at University of St. Thomas. The goal of this project is to inspire a future generation of individuals with a passion for creative expression and programming."
                         />
+                        <Project
+                            title="StatGuesser"
+                            image=""
+                            desc="A word guessing game based on Wordle and D&D."
+                        />
+                        <Project
+                            title="Coming Soon"
+                            image=""
+                            desc=""
+                        />
+                        <div className="col-span-1 sm:col-span-2 lg:col-span-3 w-full h-full">
+                            
+                        </div>
                     </div>
-                    <div className="mb-1000">asdfasf</div>
                 </div>
             </div>
         </div>
