@@ -1,0 +1,28 @@
+[
+    {
+        "title": "Purified",
+        "description": "A game that addresses awareness on the lack of clean water and teaches the player methods to solve this issue.",
+        "imageInfo": {
+            "imageName": "purified",
+            "backdropColor": "bg-[#00552e]"
+        },
+        "links": {
+            "project": {
+                "title": "Project",
+                "link": "https://francisishere.itch.io/purified"
+            },
+            "sourceCode": {
+                "title": "Source Code",
+                "link": "https://github.com/FrancisTR/Godot-Purified"
+            },
+            "video": {
+                "title": "Trailer",
+                "link": "https://www.youtube.com/watch?v=uISKLdbU4N8"
+            }
+        },
+        "devtools": [
+            "godot",
+            "html/css/js"
+        ]
+    }
+]

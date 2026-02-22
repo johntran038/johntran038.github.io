@@ -4,7 +4,8 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 function App() {
-  const Home = lazy(() => import("./pages/Home"));
+  // const Home = lazy(() => import("./pages/Home"));
+  const Home = lazy(() => import("./pages/Test"));
   // const TestParam = lazy(() => import("./pages/TestParam"));
 
   return (

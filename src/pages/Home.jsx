@@ -21,22 +21,24 @@ const Home = () => {
 
     return (
         <div className={`flex bg-[#141324] text-white min-h-screen`}>
-            <div className={`fixed min-h-screen z-10 ${open ? 'block' : 'hidden'} lg:block lg:static w-50 md:w-70 bg-gray-700 p-6`}>
-                <h2 className="font-semibold text-2xl">John Tran</h2>
-                <h3 className="text-md text-gray-400 mb-3">Software Developer</h3>
-                <nav className="flex flex-col gap-2 text-lg">
-                    <a href="#" className="hover:text-gray-300">Projects</a>
-                    <a href="#" className="hover:text-gray-300">About Me</a>
-                    <a href="#" className="hover:text-gray-300">Work Experience</a>
-                    <a href="#" className="hover:text-gray-300">Contact</a>
-                </nav>
+            <div className={`fixed min-h-screen z-10 ${open ? 'block' : 'hidden'} lg:block lg:static w-50 md:w-70 bg-gray-700 px-6`}>
+                <div className="sticky top-0">
+                    <h2 className="font-semibold text-2xl pt-6">John Tran</h2>
+                    <h3 className="text-md text-gray-400 mb-3">Software Developer</h3>
+                    <nav className="flex flex-col gap-2 text-lg">
+                        <a href="#" className="hover:text-gray-300">Projects</a>
+                        <a href="#" className="hover:text-gray-300">About Me</a>
+                        <a href="#" className="hover:text-gray-300">Work Experience</a>
+                        <a href="#" className="hover:text-gray-300">Contact</a>
+                    </nav>
+                </div>
             </div>
 
             <div className={`${screenGlowEffect} fixed inset-0 w-full h-full z-2 pointer-events-none`} />
             <div className={`w-full`}>
                 <div className={`${open ? 'blur-xs pointer-events-none' : ''}`}>
-                    <div className={`bg-black fixed w-full h-full z-9 opacity-20 pointer-events-auto ${open?'block':'hidden'}`}
-                        onClick={()=>setOpen(false)}
+                    <div className={`bg-black fixed w-full h-full z-9 opacity-20 pointer-events-auto ${open ? 'block' : 'hidden'}`}
+                        onClick={() => setOpen(false)}
                     />
                     <div className="flex flex-col items-center justify-center py-5">
                         <h2 className="text-5xl mb-2">John Tran</h2>
@@ -49,9 +51,9 @@ const Home = () => {
                         <div className="hidden xl:block">xl</div>
 
                     </div>
-                    <div className="w-full sticky top-0 lg:static lg:top-auto flex z-1 bg-[#141324] lg:justify-center items-center">
+                    <div className="flex justify-center items-center text-5xl">Projects</div>
+                    <div className="w-full sticky -translate-y-2 pt-2 mt-5 top-0 lg:static lg:top-auto flex z-1 bg-[#141324] lg:justify-center items-center">
                         <div className="block lg:hidden" onClick={() => setOpen(true)}>Open Menu</div>
-                        <div className="hidden sm:block absolute left-1/2 -translate-x-1/2 lg:static lg:translate-none">Search button / filter button</div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 text-wrap p-3 justify-items-center mb-20">
                         <Project
@@ -67,16 +69,16 @@ const Home = () => {
                             image="purified"
                             desc="A game that addresses the lack clean water access."
                             links={{
-                                project: {link:"https://francisishere.itch.io/purified"},
-                                video: {tooltip: "View Trailer", link: "https://www.youtube.com/watch?v=uISKLdbU4N8"},
-                                sourceCode: {link:"https://github.com/FrancisTR/Godot-Purified"},
+                                project: { link: "https://francisishere.itch.io/purified" },
+                                video: { tooltip: "View Trailer", link: "https://www.youtube.com/watch?v=uISKLdbU4N8" },
+                                sourceCode: { link: "https://github.com/FrancisTR/Godot-Purified" },
                             }}
                         />
                         <Project
                             title="St. Paul Crime Database Explorer"
                             image="crime-data"
                             desc="A Database that uses an API to access crime data in St. Paul."
-                            // desc="A project made in Web Development that filters through an api to access crime data. It is a vital resource for community safety and a tool for research."
+                        // desc="A project made in Web Development that filters through an api to access crime data. It is a vital resource for community safety and a tool for research."
                         >
                             {/* <p>
                                 A rhythm game is controlled by a light sensor and turning a knob. There are two versions:<br />
@@ -88,7 +90,7 @@ const Home = () => {
                             title="Rhythm Swipe"
                             image="rsp"
                             desc="A rhythm game where you swipe gems by cracking open safe."
-                            // desc="A version of “Rhythm Swipe” that is written in Processing Using Java for the Creative Coding Exhibition at University of St. Thomas. The goal of this project is to inspire a future generation of individuals with a passion for creative expression and programming."
+                        // desc="A version of “Rhythm Swipe” that is written in Processing Using Java for the Creative Coding Exhibition at University of St. Thomas. The goal of this project is to inspire a future generation of individuals with a passion for creative expression and programming."
                         />
                         <Project
                             title="StatGuesser"
@@ -100,8 +102,14 @@ const Home = () => {
                             image=""
                             desc=""
                         />
-                        <div className="col-span-1 sm:col-span-2 lg:col-span-3 w-full h-full">
-                            
+                        <div className="col-span-1 sm:col-span-2 lg:col-span-3 w-full h-full mt-20 mb-200">
+                            <div className="flex justify-center items-center text-5xl mb-5">Work Experience</div>
+                            <div className="flex justify-center items-center">
+                                <div className="grid grid-cols-2 space-x-2">
+                                    <div>wip: img</div>
+                                    <div>wip: desc</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

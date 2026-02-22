@@ -1,0 +1,10 @@
+{
+    "html/css/js": {
+        "name": "HTML CSS JS",
+        "image": "images/icons/devtools/html-css-js.png"
+    },
+    "godot": {
+        "name": "Godot",
+        "image": "images/icons/devtools/godot.png"
+    }
+}

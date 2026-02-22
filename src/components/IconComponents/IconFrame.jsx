@@ -11,7 +11,7 @@ const IconFrame = ({tooltip, onClick, children}) => {
             <div className="flex items-center justify-center"
                 onClick={onClick}
             >
-                <div className={`${bg} w-[3em] h-[2.55em] flex items-center justify-center rounded-sm text-[0.6em] group/icon relative`}>
+                <div className={`flex items-center justify-center rounded-sm text-3xl group/icon relative`}>
                     {children}
                 </div>
             </div>
