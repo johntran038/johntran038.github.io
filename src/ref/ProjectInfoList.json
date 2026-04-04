@@ -21,8 +21,58 @@
             }
         },
         "devtools": [
-            "godot",
-            "html/css/js"
+            "godot"
+        ]
+    },
+    {
+        "title": "Airline Safety Informant",
+        "description": "A project made in Web Development that uses a database involving sustainability to create a dynamic server.",
+        "imageInfo": {
+            "imageName": "airline-info",
+            "backdropColor": "bg-[#000055]"
+        },
+        "links": {
+            "project": {
+                "title": "Project",
+                "link": ""
+            },
+            "sourceCode": {
+                "title": "Source Code",
+                "link": ""
+            },
+            "video": {
+                "title": "Trailer",
+                "link": ""
+            }
+        },
+        "devtools": [
+            "html/css/js",
+            "express",
+            "nodejs"
+        ]
+    },
+    {
+        "title": "St. Paul Crime Database Explorer",
+        "description": "A project made in Web Development that filters through an api to access crime data. It is a vital resource for community safety and a tool for research.",
+        "imageInfo": {
+            "imageName": "crime-data",
+            "backdropColor": "bg-[#FFFFFF]"
+        },
+        "links": {
+            "project": {
+                "title": "Project",
+                "link": "https://github.com/johntran038/webdev-rest"
+            },
+            "video": {
+                "title": "Demo",
+                "link": "https://www.youtube.com/watch?v=wLrTDwNVQbQ"
+            }
+        },
+        "devtools": [
+            "vuejs",
+            "html/css/js",
+            "express",
+            "nodejs"
         ]
     }
 ]

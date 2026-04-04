@@ -6,5 +6,17 @@
     "godot": {
         "name": "Godot",
         "image": "images/icons/devtools/godot.png"
+    },
+    "express": {
+        "name": "Express.js",
+        "image": "images/icons/devtools/expressjs.png"
+    },
+    "nodejs": {
+        "name": "Node.js",
+        "image": "images/icons/devtools/nodejs.png"
+    },
+    "vuejs": {
+        "name": "Vue.js",
+        "image": "images/icons/devtools/vuejs.png"
     }
 }
